@@ -16,12 +16,13 @@ class HelpMeSkill(MycroftSkill):
         #ask for body part
         bodypart = self.get_user_response("which.part")
         # They said the body part
-        specifiypart = self.get_user_response("what.exactly")
+        specificypart = self.get_user_response("what.exactly")
         #they specify the body part
         painlevel = self.get_user_response("pain.level")
-
+        summary = "Okay, so in your " + bodypart + ", more specifically "+specificypart", you experience level "+painlevel" pain.
+        self.speak(summary)
         shouldcallambulance =self.get_user_response("serious")
-        if shouldcallambulance =="yes":
+        if shouldcallambulance == "yes":
             self.speak_dialog("calling.ambulance")
         else:
             self.speak_dialog("not.calling.ambulance")
