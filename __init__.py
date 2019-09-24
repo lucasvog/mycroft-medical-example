@@ -19,7 +19,7 @@ class HelpMeSkill(MycroftSkill):
         specificypart = self.get_user_response("what.exactly")
         #they specify the body part
         painlevel = self.get_user_response("pain.level")
-        summary = "Okay, so in your " + bodypart + ", more specifically "+specificypart", you experience level "+painlevel" pain.
+        summary = "Okay, so in your " + bodypart + ", more specifically " + specificypart + ", you experience level " + painlevel + " pain.
         self.speak(summary)
         shouldcallambulance =self.get_user_response("serious")
         if shouldcallambulance == "yes":
