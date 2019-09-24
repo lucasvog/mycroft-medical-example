@@ -22,9 +22,9 @@ class HelpMeSkill(MycroftSkill):
         summary = "Okay, so in your " + bodypart + ", more specifically " + specificypart + ", you experience level " + painlevel + " pain."
         self.speak(summary)
         shouldcallambulance =self.get_user_response("serious")
-        if shouldcallambulance == "yes":
+        if shouldcallambulance == "yes": # if the patient needs an ambulance
             self.speak_dialog("calling.ambulance")
-        else:
+        else: # if the patient does not want an ambulance
             self.speak_dialog("not.calling.ambulance")
 
 def create_skill():
