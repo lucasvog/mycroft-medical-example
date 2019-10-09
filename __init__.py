@@ -12,7 +12,7 @@ class HelpMeSkill(MycroftSkill):
         return response
 
     @intent_handler(IntentBuilder("").require("help.me"))
-    def handle_knock_knock_intent(self, message):# They said help me
+    def handle_medical_emergency(self, message):# They said help me
         #ask for body part
         bodypart = self.get_user_response("which.part")
         # They said the body part
